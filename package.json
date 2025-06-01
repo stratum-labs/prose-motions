@@ -1,0 +1,34 @@
+{
+  "name": "prose-motions",
+  "private": true,
+  "packageManager": "bun@1.1.8",
+
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+
+  "scripts": {
+    "clean": "rm -rf packages/*/dist",
+    "build": "bun workspaces run build",
+    "dev":   "bun run --hot packages/core dev",
+    "test":  "vitest",
+    "lint":  "eslint \"**/*.{ts,tsx}\""
+  },
+
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.2",
+    "eslint": "^9.0.0",
+    "prettier": "^3.5.3",
+    "@swc/core": "^1.11.29",
+    "@swc/cli": "^0.7.7",
+    "@swc/helpers": "^0.5.17",
+
+    "@tiptap/starter-kit": "^2.2.1",
+    "jsdom": "^24.0.0",
+
+    "typescript": "^5.4.5",
+    "vitest": "^3.1.4",
+    "@vitest/ui": "^3.1.4"
+  }
+}
