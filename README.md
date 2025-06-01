@@ -1,14 +1,14 @@
-# Prose Motions — Vim-style navigation for Tiptap / ProseMirror
+<h1 align="center"> Prose Motions </h1>
 
-`@prose-motions/core` is a lightweight extension that brings Vim's **Normal / Insert** modes and an ever-growing collection of native keybindings to any Tiptap (v2) or ProseMirror editor.
+`@prose-motions/core` is a lightweight extension that brings Vim's **Normal / Insert** modes and an ever-growing collection of native keybindings to any [Tiptap (v2)](https://tiptap.dev) or [ProseMirror editor](https://prosemirror.net).
 
 ## Features
 
-• `Esc` / `i` to toggle modes
-• Basic cursor motions: `h` `j` `k` `l`
-• Word-back with `b`
-• Delete current line with `dd`
-• Blocks text input in Normal mode to match Vim behaviour
+ - `Esc` / `i` to toggle modes
+ - Basic cursor motions: `h` `j` `k` `l`
+ - Word-back with `b`
+ - Delete current line with `dd`
+ - Blocks text input in Normal mode to match Vim behaviour
 
 Designed to be drop-in: no external CSS, no runtime deps beyond Tiptap itself.
 
@@ -108,6 +108,8 @@ This package is small on purpose but it still hides a lot of modern tooling that
 - Repeat counts (`5j`), more operators (`dw`, `yy`, `p`)
 - Proper line height calculation to avoid layout thrash
 - Performance micro-optimisations
+- windows / linux mode change support
+- editor sandbox
 - CI / automated publishing flow
 - Complete Vim key-binding coverage — implement the full command set documented in [`:help index`](https://vimhelp.org/index.txt.html)
 
