@@ -93,6 +93,7 @@ Intentionally minimal and built with modern tooling, Prose Motions adds powerful
 
 ## Roadmap
 
+- fix: cmd - v mod override persists in insert mode
 - Repeat counts (`5j`), more operators (`dw`, `yy`, `p`)
 - Proper line height calculation to avoid layout thrash
 - Performance micro-optimisations
