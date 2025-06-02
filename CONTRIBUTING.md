@@ -8,14 +8,14 @@ This document describes the development workflow, code style, and tooling used i
 
 ## Table of contents
 
-1. Getting started
-2. Project layout
-3. Development workflow
-4. Tests
-5. Linting & formatting
-6. Commit conventions & PR checklist
-7. Release process
-8. Code of conduct
+1. [Getting started](#1-getting-started)
+2. [Project layout](#2-project-layout)
+3. [Development workflow](#3-development-workflow)
+4. [Tests](#4-tests)
+5. [Linting & formatting](#5-linting--formatting)
+6. [Commit conventions & PR checklist](#6-commit-conventions--pr-checklist)
+7. [Release process](#7-release-process)
+8. [Code of conduct](#8-code-of-conduct)
 
 ---
 
