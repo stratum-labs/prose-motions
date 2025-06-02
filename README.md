@@ -99,7 +99,7 @@ export default function MyBlockNote () {
 ```
 ## Why Prose Motions ?
 
-This package is small on purpose uses a lot of modern tooling that makes dropping this extension in your editor instances non-intrusive while providing the keybindings your niche users want to use:
+Intentionally minimal and built with modern tooling, Prose Motions adds powerful Vim keybindings to your editor without the bloat - perfect for developers who value efficiency:
 
 - **TypeScript-first** – the whole codebase is written in strict TS so extending the keybinding set feels like ordinary app code, no fiddling with build steps.
 - **ProseMirror plugin architecture** – every keybinding (motions, operators, text-objects…) is ultimately a pure command that manipulates the editor state through transactions; no DOM tricks involved. See the ProseMirror reference for details ([docs](https://prosemirror.net/docs/ref/)).
