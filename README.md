@@ -95,6 +95,8 @@ Intentionally minimal and built with modern tooling, Prose Motions adds powerful
 - Performance micro-optimisations
 - windows / linux mode change support
 - editor sandbox
+- @prose-motions/styles package / caret transform support in normal vs insert mode
+- config layer / i.e, change caret size or color, choose if editor defaults to normal or insert mode (currently defaults to insert mode)
 - CI / automated publishing flow
 - Complete Vim key-binding coverage — implement the full command set documented in [`:help index`](https://vimhelp.org/index.txt.html)
 
