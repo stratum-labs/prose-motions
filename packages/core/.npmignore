@@ -3,3 +3,4 @@ src/
 .swcrc
 tsconfig.build.json
 tsconfig.json
+README.md
