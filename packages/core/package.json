@@ -1,19 +1,19 @@
 {
   "name": "@prose-motions/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Drop-in Vim-style motions for Tiptap / ProseMirror editors",
   "author": "Stratum Labs <hq@stratumlabs.ai>",
   "license": "MIT",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/src/index.cjs",
+  "module": "./dist/src/index.mjs",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
     "build:types": "tsc -p tsconfig.build.json",
-    "build:esm": "swc src -d dist --config-file .swcrc --module.type es6",
-    "build:cjs": "swc src -d dist --config-file .swcrc --module.type commonjs",
+    "build:esm": "swc src -d dist --config-file .swcrc -C module.type=es6 -C module.outFileExtension=.mjs",
+    "build:cjs": "swc src -d dist --config-file .swcrc -C module.type=commonjs -C module.outFileExtension=.cjs",
     "build": "bun run clean && bun run build:types && bun run build:esm && bun run build:cjs",
-    "dev": "swc src -d dist --watch --config-file .swcrc --module.type es6"
+    "dev": "swc src -d dist --watch --config-file .swcrc -C module.type=es6 -C module.outFileExtension=.mjs"
   },
   "exports": {
     ".": {
@@ -24,5 +24,17 @@
   "peerDependencies": {
     "@tiptap/core": "^2",
     "prosemirror-state": "^1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratum-labs/prose-motions.git"
+  },
+  "keywords": ["tiptap", "prosemirror", "vim", "editor", "motions"],
+  "bugs": {
+    "url": "https://github.com/stratum-labs/prose-motions/issues"
+  },
+  "homepage": "https://github.com/stratum-labs/prose-motions#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,11 +1,4 @@
-<div align="center">
-  <h1>@prose-motions/core</h1>
-  <p>Drop-in Vim-style motions for Tiptap / ProseMirror editors</p>
-
-  [![npm version](https://img.shields.io/npm/v/@prose-motions/core)](https://www.npmjs.com/package/@prose-motions/core)
-  ![package size](https://img.shields.io/badge/size-1.4%20kB-brightgreen)
-  [![npm](https://img.shields.io/npm/l/@prose-motions/core)](https://www.npmjs.com/package/@prose-motions/core)
-</div>
+<h1 align="center"> Prose Motions </h1>
 
 `@prose-motions/core` is a lightweight extension that brings Vim's **Normal / Insert** modes and an ever-growing collection of native keybindings to any [Tiptap (v2)](https://tiptap.dev) or [ProseMirror editor](https://prosemirror.net).
 
@@ -108,33 +101,3 @@ This package is small on purpose uses a lot of modern tooling that makes droppin
 - **Zero runtime deps** – no CSS frameworks, no helper libs. The only peer deps are the editor engines themselves (`@tiptap/core`, `prosemirror-state`).
 
 > Thanks to ProseMirror's declarative **state → transaction → new-state** we can express complex Vim behaviour in plain TypeScript (see the [ProseMirror State guide](https://prosemirror.net/docs/guide/#state)). Want to add `w`, `yy`, or repeat counts? Just compose new commands – no native code compilation, no browser-specific hacks.
-
-
-## Roadmap
-
-- Repeat counts (`5j`), more operators (`dw`, `yy`, `p`)
-- Proper line height calculation to avoid layout thrash
-- Performance micro-optimisations
-- windows / linux mode change support
-- editor sandbox
-- CI / automated publishing flow
-- Complete Vim key-binding coverage — implement the full command set documented in [`:help index`](https://vimhelp.org/index.txt.html)
-
-## Size Challenge
-
-We're on a mission to keep this package lean and mean. Check out our size stats:
-
-| Initial Size (June 2025) | Latest Size | Change |
-|-------------------------|-------------|---------|
-| 1.4 kB | 1.4 kB | +0.0 kB |
-
-> Let's see if we can add awesome features while keeping our package fit. Every byte counts, but fun counts more!
-
-## Who's using Prose Motions?
-
-| Product | Description |
-|---------|-------------|
-| [Grit AI](https://gritai.app/) | The AI Note Editor |
-
-Contributions & ideas are welcome – open an issue or PR.
-

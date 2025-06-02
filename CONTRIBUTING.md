@@ -55,9 +55,9 @@ prose-motions
 ```
 
 Key facts:
-• Each workspace is completely independent and publishes its own artefacts.
-• SWC (`.swcrc`) controls TS→JS compilation; we never ship `ts-node` at runtime.
-• Declarations are generated once via `tsc -p tsconfig.build.json`.
+ - Each workspace is completely independent and publishes its own artefacts.
+ - SWC (`.swcrc`) controls TS→JS compilation; we never ship `ts-node` at runtime.
+ - Declarations are generated once via `tsc -p tsconfig.build.json`.
 
 ---
 
@@ -98,9 +98,9 @@ Write table-driven tests where possible. Each test file should be colocated next
 
 ## 5. Linting & formatting
 
-• ESLint config inherits from `@antfu/eslint-config`. Run `bun run lint` to see issues.
-• Prettier 3 is used for Markdown & JSON files; run `npx prettier --check .` before pushing.
-• CI will fail if lint errors are introduced.
+ - ESLint config inherits from `@antfu/eslint-config`. Run `bun run lint` to see issues.
+ - Prettier 3 is used for Markdown & JSON files; run `npx prettier --check .` before pushing.
+ - CI will fail if lint errors are introduced.
 
 ---
 
