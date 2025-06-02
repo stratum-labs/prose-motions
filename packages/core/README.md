@@ -57,26 +57,3 @@ export default function MyProseMirror () {
 ```
 
 > This snippet uses the modern "React × ProseMirror" bridge maintained by Handle with Care ([handlewithcarecollective/react-prosemirror](https://github.com/handlewithcarecollective/react-prosemirror)). It automatically handles state-tearing issues by updating the `EditorView` inside a layout effect
-
-## Usage (BlockNote React example)
-
-```tsx
-// Styles required by BlockNote
-import "@blocknote/core/fonts/inter.css"
-import "@blocknote/mantine/style.css"
-
-import { BlockNoteView } from "@blocknote/mantine"
-import { useCreateBlockNote } from "@blocknote/react"
-import { VimMode } from "@prose-motions/core"
-
-export default function MyBlockNote () {
-  // Create an editor instance with VimMode registered up-front
-  const editor = useCreateBlockNote({
-    _tiptapOptions: {
-      extensions: [VimMode],
-    },
-  })
-
-  return <BlockNoteView editor={editor} />
-}
-```
