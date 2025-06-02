@@ -2,16 +2,6 @@
 
 `@prose-motions/core` is a lightweight extension that brings Vim's **Normal / Insert** modes and an ever-growing collection of native keybindings to any [Tiptap (v2)](https://tiptap.dev) or [ProseMirror editor](https://prosemirror.net).
 
-## Features
-
- - `Esc` / `i` to toggle modes
- - Cursor motions: `h` `j` `k` `l`
- - Word-back with `b`
- - Delete current line with `dd`
- - Blocks text input in Normal mode to match Vim behaviour
-
-Designed to be drop-in: no external CSS, no runtime deps beyond Tiptap itself.
-
 ## Installation
 
 ```bash
@@ -90,14 +80,3 @@ export default function MyBlockNote () {
   return <BlockNoteView editor={editor} />
 }
 ```
-## Why Prose Motions ?
-
-This package is small on purpose uses a lot of modern tooling that makes dropping this extension in your editor instances non-intrusive while providing the keybindings your niche users want to use:
-
-- **TypeScript-first** – the whole codebase is written in strict TS so extending the keybinding set feels like ordinary app code, no fiddling with build steps.
-- **ProseMirror plugin architecture** – every keybinding (motions, operators, text-objects…) is ultimately a pure command that manipulates the editor state through transactions; no DOM tricks involved. See the ProseMirror reference for details ([docs](https://prosemirror.net/docs/ref/)).
-- **Tiptap v2 wrapper** – the extension registers itself as a standard `Extension` so it works out-of-the-box in Tiptap powered editors and any wrapper that exposes the underlying ProseMirror view (e.g. BlockNote). ([tiptap.dev](https://tiptap.dev/guide/introduction))
-- **Optimized Bundle** – Built with SWC for both ESM and CJS, with minification and tree-shaking. Tiny footprint in your application bundle.
-- **Zero runtime deps** – no CSS frameworks, no helper libs. The only peer deps are the editor engines themselves (`@tiptap/core`, `prosemirror-state`).
-
-> Thanks to ProseMirror's declarative **state → transaction → new-state** we can express complex Vim behaviour in plain TypeScript (see the [ProseMirror State guide](https://prosemirror.net/docs/guide/#state)). Want to add `w`, `yy`, or repeat counts? Just compose new commands – no native code compilation, no browser-specific hacks.

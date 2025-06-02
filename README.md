@@ -3,7 +3,7 @@
   <p>Drop-in Vim-style motions for Tiptap / ProseMirror editors</p>
 
   [![npm version](https://img.shields.io/npm/v/@prose-motions/core)](https://www.npmjs.com/package/@prose-motions/core)
-  ![package size](https://img.shields.io/badge/size-1.4%20kB-brightgreen)
+  ![package size](https://img.shields.io/badge/size-3.83%20kB-brightgreen)
   [![npm](https://img.shields.io/npm/l/@prose-motions/core)](https://www.npmjs.com/package/@prose-motions/core)
 </div>
 
@@ -124,9 +124,9 @@ Intentionally minimal and built with modern tooling, Prose Motions adds powerful
 
 We're on a mission to keep this package lean and mean. Check out our size stats:
 
-| Initial Size (June 2025) | Latest Size | Change |
+| Initial Size (January 2025) | Latest Size | Change |
 |-------------------------|-------------|---------|
-| 1.4 kB | 1.4 kB | +0.0 kB |
+| 3.83 kB | 3.83 kB | +0.0 kB |
 
 > Let's see if we can add awesome features while keeping our package fit. Every byte counts, but fun counts more!
 
