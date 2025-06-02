@@ -82,7 +82,7 @@ Intentionally minimal and built with modern tooling, Prose Motions adds powerful
 - **TypeScript-first** – the whole codebase is written in strict TS so extending the keybinding set feels like ordinary app code, no fiddling with build steps.
 - **ProseMirror plugin architecture** – every keybinding (motions, operators, text-objects…) is ultimately a pure command that manipulates the editor state through transactions; no DOM tricks involved. See the ProseMirror reference for details ([docs](https://prosemirror.net/docs/ref/)).
 - **Tiptap v2 wrapper** – the extension registers itself as a standard `Extension` so it works out-of-the-box in Tiptap powered editors and any wrapper that exposes the underlying ProseMirror view. ([tiptap.dev](https://tiptap.dev/guide/introduction))
-- **Optimized Bundle** – Built with SWC for both ESM and CJS, with minification and tree-shaking. Tiny footprint in your application bundle.
+- **Optimized Bundle** – Built with Bun for ESM modules with tree-shaking optimization. Tiny footprint in your application bundle.
 - **Zero runtime deps** – no CSS frameworks, no helper libs. The only peer deps are the editor engines themselves (`@tiptap/core`, `prosemirror-state`).
 
 > Thanks to ProseMirror's declarative **state → transaction → new-state** we can express complex Vim behaviour in plain TypeScript (see the [ProseMirror State guide](https://prosemirror.net/docs/guide/#state)). Want to add `w`, `yy`, or repeat counts? Just compose new commands – no native code compilation, no browser-specific hacks.
