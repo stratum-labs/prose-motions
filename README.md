@@ -3,7 +3,7 @@
   <p>Drop-in Vim-style motions for Tiptap / ProseMirror editors</p>
 
   [![npm version](https://img.shields.io/npm/v/@prose-motions/core)](https://www.npmjs.com/package/@prose-motions/core)
-  ![package size](https://img.shields.io/badge/size-3.83%20kB-brightgreen)
+  ![package size](https://img.shields.io/badge/size-3.52%20kB-brightgreen)
   [![npm](https://img.shields.io/npm/l/@prose-motions/core)](https://www.npmjs.com/package/@prose-motions/core)
 </div>
 
@@ -75,7 +75,7 @@ export default function MyProseMirror () {
 
 > This snippet uses the modern "React × ProseMirror" bridge maintained by Handle with Care ([handlewithcarecollective/react-prosemirror](https://github.com/handlewithcarecollective/react-prosemirror)). It automatically handles state-tearing issues by updating the `EditorView` inside a layout effect
 
-## Why Prose Motions ?
+## Why Use Prose Motions ?
 
 Intentionally minimal and built with modern tooling, Prose Motions adds powerful Vim keybindings to your editor without the bloat - perfect for developers who value efficiency:
 
@@ -87,6 +87,9 @@ Intentionally minimal and built with modern tooling, Prose Motions adds powerful
 
 > Thanks to ProseMirror's declarative **state → transaction → new-state** we can express complex Vim behaviour in plain TypeScript (see the [ProseMirror State guide](https://prosemirror.net/docs/guide/#state)). Want to add `w`, `yy`, or repeat counts? Just compose new commands – no native code compilation, no browser-specific hacks.
 
+  ##  New to Vim?
+
+  If you're new to Vim motions or were pointed here by colleagues, we recommend reading ["Why Vim Is More than Just an Editor – Vim Language, Motions, and Modes Explained"](https://www.freecodecamp.org/news/vim-language-and-motions-explained/). It's an excellent introduction to the concepts that make Vim-style editing so powerful.
 
 ## Roadmap
 
@@ -106,7 +109,7 @@ We're on a mission to keep this package lean and mean. Check out our size stats:
 
 | Initial Size (January 2025) | Latest Size | Change |
 |-------------------------|-------------|---------|
-| 3.83 kB | 3.83 kB | +0.0 kB |
+| 3.52 kB | 3.52 kB | +0.0 kB |
 
 > Let's see if we can add awesome features while keeping our package fit. Every byte counts, but fun counts more!
 
