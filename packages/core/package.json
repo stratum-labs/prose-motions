@@ -4,26 +4,26 @@
   "description": "Drop-in Vim-style motions for Tiptap / ProseMirror editors",
   "author": "Stratum Labs <hq@stratumlabs.ai>",
   "license": "MIT",
-  "main": "./dist/src/index.cjs",
-  "module": "./dist/src/index.mjs",
+  "main": "./dist/src/index.js",
+  "module": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
     "build:types": "tsc -p tsconfig.build.json",
-    "build:esm": "swc src -d dist --config-file .swcrc -C module.type=es6 -C module.outFileExtension=.mjs",
-    "build:cjs": "swc src -d dist --config-file .swcrc -C module.type=commonjs -C module.outFileExtension=.cjs",
-    "build": "bun run clean && bun run build:types && bun run build:esm && bun run build:cjs",
-    "dev": "swc src -d dist --watch --config-file .swcrc -C module.type=es6 -C module.outFileExtension=.mjs"
+    "build:esm": "bun build ./src/index.ts --outdir ./dist/src --target node --format esm --outfile index.js --external '@tiptap/*'",
+    "build": "bun run clean && bun run build:types && bun run build:esm"
   },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js",
+      "default": "./dist/src/index.js"
     }
   },
+  "type": "module",
   "peerDependencies": {
     "@tiptap/core": "^2",
-    "prosemirror-state": "^1"
+    "@tiptap/pm": "^2"
   },
   "repository": {
     "type": "git",
